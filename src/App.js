@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import AsignacionCitas from './Pages/Asignacion_citas';
+import IngresoC from './Pages/Ingreso';
+import RecuperacionC from './Pages/Recuperacion';
+import CambioPC from './Pages/CambioP';
+import MenuP from './Pages/Menu';
+import Layout from './Components/Layout';
 import './App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <BrowserRouter>
+       <Routes>
+        <Route path="/" element={<Layout/>}>
+        <Route path="Asignacion_citas" element={<AsignacionCitas/>}/>
+        <Route path="Ingreso" element={<IngresoC/>}/>
+        <Route path="Recuperacion" element={<RecuperacionC/>}/>
+        <Route path="CambioContrasena" element={<CambioPC/>}/>
+        <Route path="Menu" element={<MenuP/>}/>
+        </Route>
+        </Routes>
+       </BrowserRouter>
     </div>
   );
 }
