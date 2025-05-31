@@ -1,48 +1,44 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './Components/Layout';
+import Ingreso from './Pages/Ingreso';
+import CreacionUsuario from './Pages/Creacion_Usuario';
 import AsignacionCitas from './Pages/Asignacion_citas';
-import IngresoC from './Pages/Ingreso';
+import TotemCliente from './Pages/Totem_Cliente';
+import Reportesp from './Pages/Reportesp';
+import LlamadoTurnos from './Pages/Llamado_Turnos';
+import Menu from './Pages/Menu';
 import RecuperacionC from './Pages/Recuperacion';
 import CambioPC from './Pages/CambioP';
-import MenuP from './Pages/Menu';
-import Layout from './Components/Layout';
-import CreacionU from './Pages/Creacion_Usuario';
 import ModificacionU from './Pages/Modificacion_Usuario';
-import Reportes from './Pages/Reportesp';
-import TotemC from './Pages/Totem_Cliente';
 import ServiciosT from './Pages/Servicios_Totem';
 import OtrosS from './Pages/Otros_Servicios';
-import LlamadoT from './Pages/Llamado_Turnos';
 import Televisor from './Pages/Televisor_Llamado';
-import './App.css';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import GestionUsuarios from './Pages/Gestion_Usuarios';
 
-
-
-
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     <BrowserRouter>
-       <Routes>
-        <Route path="/" element={<Layout/>}>
-        <Route path="Asignacion_citas" element={<AsignacionCitas/>}/>
-        <Route path="Ingreso" element={<IngresoC/>}/>
-        <Route path="Recuperacion" element={<RecuperacionC/>}/>
-        <Route path="CambioContrasena" element={<CambioPC/>}/>
-        <Route path="Creacion_Usuario" element={<CreacionU/>}/>
-        <Route path="Modificacion_Usuario" element={<ModificacionU/>}/>
-        <Route path="Totem_Cliente" element={<TotemC/>}/>
-        <Route path="Reportesp" element={<Reportes/>}/>
-        <Route path="Servicios_Totem" element={<ServiciosT/>}/>
-        <Route path="Otros_Servicios" element={<OtrosS/>}/>
-        <Route path="Llamado_Turnos" element={<LlamadoT/>}/>
-        <Route path="Televisor_Llamado" element={<Televisor/>}/>
-        <Route path="Menu" element={<MenuP/>}/>
+    <Router>
+      <Routes>
+        <Route path="/ingreso" element={<Ingreso />} />
+        <Route path="/creacion-usuario" element={<CreacionUsuario />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/gestion-usuarios" element={<GestionUsuarios />} />
+          <Route path="/asignacion-citas" element={<AsignacionCitas />} />
+          <Route path="/reportes" element={<Reportesp />} />
+          <Route path="/llamados" element={<LlamadoTurnos />} />
+          <Route path="/Recuperacion" element={<RecuperacionC />} />
+          <Route path="/CambioContrasena" element={<CambioPC />} />
+          <Route path="/Modificacion_Usuario" element={<ModificacionU />} />
+          <Route path="/Totem_Cliente" element={<TotemCliente />} />
+          <Route path="/Servicios_Totem" element={<ServiciosT />} />
+          <Route path="/Otros_Servicios" element={<OtrosS />} />
+          <Route path="/Televisor_Llamado" element={<Televisor />} />
         </Route>
-        </Routes>
-       </BrowserRouter>
-    </div>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

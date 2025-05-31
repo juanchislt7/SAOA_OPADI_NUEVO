@@ -4,18 +4,7 @@ function MenuP() {
 
     return (
 
-        <div class="menu-container">
-        <div class="sidebar">
-            <h1>Menú Principal - Administrador</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Administración de Usuarios</a></li>
-                    <li><a href="#">Asignación de Citas</a></li>
-                    <li><a href="#">Reportes</a></li>
-                    <li><a href="#">Salir</a></li>
-                </ul>
-            </nav>
-        </div>
+    <div class="menu-container">
         <div class="video-container">
             <h2>Espacio para Video</h2>
             <video width="100%" controls>
