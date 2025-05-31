@@ -26,7 +26,7 @@ const Ingreso = () => {
       localStorage.setItem('token', response.data.token);
       navigate('/menu');
     } catch (err) {
-      setError(err.response?.data?.message || 'Error al iniciar sesión');
+      setError(err.response?.data?.error || 'Error al iniciar sesión');
     }
   };
 
